@@ -10,5 +10,6 @@
     "directory": "packages/oneui-icons-react"
   },
   "module": "index.js",
+  "typings": "index.d.ts",
   "packageManager": "yarn@4.11.0"
 }

@@ -43,7 +43,7 @@ declare const ${name}: React.RefAttributes<SVGSVGElement> & {size: number};\n\n`
 };
 
 let reactExport = "";
-let reactTypes = "";
+let reactTypes = `import React from "react";\n\n`;
 if (!fs.existsSync("./packages/oneui-icons-react/icons")) {
   fs.mkdirSync("./packages/oneui-icons-react/icons");
 }
