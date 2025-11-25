@@ -28,7 +28,7 @@ const reactTemplate = (fileName, svg) => {
 const reactTypesTemplate = (name, svg) => {
   const beginPos = svg.search(/(?<=>)/);
   const svgWithBg = svg.slice(0, beginPos) + '<rect width="100%" height="100%" fill="#fff"/>' + svg.slice(beginPos);
-  return `/**
+  return `\n\n/**
   * @component @name ${name}
   * @description OneUI icon
   *
@@ -39,11 +39,18 @@ const reactTypesTemplate = (name, svg) => {
   * @returns {JSX.Element} JSX Element
   *
   */
-declare const ${name}: React.RefAttributes<SVGSVGElement> & {size: number};\n\n`;
+declare const ${name}: OneUIIcon;`;
 };
 
 let reactExport = "";
-let reactTypes = `import React from "react";\n\n`;
+let reactTypes = `import { RefAttributes, SVGProps, ForwardRefExoticComponent } from 'react';
+
+type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
+type ElementAttributes = RefAttributes<SVGSVGElement> & SVGAttributes;
+interface IconProps extends ElementAttributes {
+    size?: string | number;
+}
+type OneUIIcon = ForwardRefExoticComponent<Omit<IconProps, 'ref'> & RefAttributes<SVGSVGElement>>;`;
 if (!fs.existsSync("./packages/oneui-icons-react/icons")) {
   fs.mkdirSync("./packages/oneui-icons-react/icons");
 }
