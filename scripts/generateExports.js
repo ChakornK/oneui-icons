@@ -21,7 +21,7 @@ const reactTemplate = (fileName, svg) => {
     .join("")}`;
   return {
     name: componentName,
-    code: `export default ({size}) => (${formattedSvg})`,
+    code: `import React from "react";export default ({size}) => (${formattedSvg})`,
   };
 };
 
@@ -34,7 +34,7 @@ for (const file of fs.readdirSync("./icons")) {
     (() => {
       // react
       const { name, code } = reactTemplate(file, fs.readFileSync(`./icons/${file}`, "utf-8"));
-      reactExport += `export const ${name} = import("./icons/${name}.jsx");\n`;
+      reactExport += `export {default as ${name}} from "./icons/${name}.jsx";\n`;
       fs.writeFileSync(`./packages/oneui-icons-react/icons/${name}.jsx`, code);
     })();
   }
