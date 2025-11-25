@@ -1,0 +1,14 @@
+{
+  "name": "oneui-icons-react",
+  "description": "OneUI icons for React.",
+  "author": "ChakornK",
+  "version": "0.0.1",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chakornk/oneui-icons.git",
+    "directory": "packages/oneui-icons-react"
+  },
+  "module": "index.js",
+  "packageManager": "yarn@4.11.0"
+}

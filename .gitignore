@@ -1,2 +1,5 @@
 node_modules/
 .yarn/
+
+packages/*/icons/
+packages/*/index.js
