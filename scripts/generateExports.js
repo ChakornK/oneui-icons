@@ -25,7 +25,25 @@ const reactTemplate = (fileName, svg) => {
   };
 };
 
+const reactTypesTemplate = (name, svg) => {
+  const beginPos = svg.search(/(?<=>)/);
+  const svgWithBg = svg.slice(0, beginPos) + '<rect width="100%" height="100%" fill="#fff"/>' + svg.slice(beginPos);
+  return `/**
+  * @component @name ${name}
+  * @description OneUI icon
+  *
+  * @preview ![img](data:image/svg+xml;base64,${btoa(svgWithBg)})
+  *
+  * @param {Object} props - Icon props
+  * @param {number} props.size - Icon size
+  * @returns {JSX.Element} JSX Element
+  *
+  */
+declare const ${name}: React.RefAttributes<SVGSVGElement> & {size: number};\n\n`;
+};
+
 let reactExport = "";
+let reactTypes = "";
 if (!fs.existsSync("./packages/oneui-icons-react/icons")) {
   fs.mkdirSync("./packages/oneui-icons-react/icons");
 }
@@ -33,11 +51,14 @@ for (const file of fs.readdirSync("./icons")) {
   if (file.endsWith(".svg")) {
     (() => {
       // react
-      const { name, code } = reactTemplate(file, fs.readFileSync(`./icons/${file}`, "utf-8"));
+      const svg = fs.readFileSync(`./icons/${file}`, "utf-8");
+      const { name, code } = reactTemplate(file, svg);
       reactExport += `export {default as ${name}} from "./icons/${name}.jsx";\n`;
+      reactTypes += reactTypesTemplate(name, svg);
       fs.writeFileSync(`./packages/oneui-icons-react/icons/${name}.jsx`, code);
     })();
   }
 }
 
 fs.writeFileSync("./packages/oneui-icons-react/index.js", reactExport);
+fs.writeFileSync("./packages/oneui-icons-react/index.d.ts", reactTypes);

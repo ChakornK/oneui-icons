@@ -3,3 +3,4 @@ node_modules/
 
 packages/*/icons/
 packages/*/index.js
+packages/*/index.d.ts
