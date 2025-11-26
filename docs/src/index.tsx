@@ -14,7 +14,7 @@ import "./style.css";
 export function App() {
   return (
     <LocationProvider>
-      <div class="mt-16 h-screen w-screen overflow-hidden">
+      <div class="h-screen w-screen overflow-hidden">
         <Header />
         <Router>
           <Route path="/" component={Home} />
