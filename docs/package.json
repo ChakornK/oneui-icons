@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "oneui-icons-react": "latest",
+    "preact": "^10.27.2",
+    "preact-iso": "^2.11.0",
+    "preact-render-to-string": "^6.6.3",
+    "react": "npm:@preact/compat@18.3.1",
+    "react-dom": "npm:@preact/compat@18.3.1",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.4"
+  },
+  "packageManager": "yarn@4.12.0"
+}
