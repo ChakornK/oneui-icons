@@ -25,7 +25,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
 
-      - name: Install dependencies
+      - name: Setup Yarn
         run: |
           corepack enable
           corepack prepare yarn --activate
