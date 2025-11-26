@@ -12,7 +12,7 @@ const reactTemplate = (fileName, svg) => {
   for (const [find, replace] of Object.entries(replaceMap)) {
     formattedSvg = formattedSvg.replaceAll(find, replace);
   }
-  formattedSvg = formattedSvg.replace(`width="24" height="24"`, "width={size} height={size}");
+  formattedSvg = formattedSvg.replace(/width="\d+" height="\d+"/, "width={size} height={size}");
 
   const componentName = `Icon${fileName
     .replace(".svg", "")
