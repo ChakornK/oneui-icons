@@ -1119,9 +1119,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.249":
-  version: 1.5.259
-  resolution: "electron-to-chromium@npm:1.5.259"
-  checksum: 10c0/a6600ff20d513e1acce29cd04af5fcb338295ebe5a13fa9802009464d9c269a4a092218c8ea8c9b85017a1efd75606fe0cdf5f36216979f7c8462af7df2f530d
+  version: 1.5.260
+  resolution: "electron-to-chromium@npm:1.5.260"
+  checksum: 10c0/5be308adbe7f9b370f628eb3ae35528bccc8e8592ee4848f9dfa308af658deaa87e915dd6929b6993e712929e7e6828f40434814506476ae11051381ee423fdf
   languageName: node
   linkType: hard
 
@@ -1776,7 +1776,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"oneui-icons-react@npm:^0.0.8":
+"oneui-icons-react@npm:latest":
   version: 0.0.8
   resolution: "oneui-icons-react@npm:0.0.8"
   checksum: 10c0/b770e6ab0a6f278f36893f5289ca78709864a7b2e044309f9bb287e34712de26fbe429da34f74a8d3b4bc66eb77be40bde602a24735833d4147fff8d335cb961
@@ -1859,9 +1859,9 @@ __metadata:
   linkType: hard
 
 "proc-log@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "proc-log@npm:6.0.0"
-  checksum: 10c0/40c5e2b4c55e395a3bd72e38cba9c26e58598a1f4844fa6a115716d5231a0919f46aa8e351147035d91583ad39a794593615078c948bc001fe3beb99276be776
+  version: 6.1.0
+  resolution: "proc-log@npm:6.1.0"
+  checksum: 10c0/4f178d4062733ead9d71a9b1ab24ebcecdfe2250916a5b1555f04fe2eda972a0ec76fbaa8df1ad9c02707add6749219d118a4fc46dc56bdfe4dde4b47d80bb82
   languageName: node
   linkType: hard
 
@@ -1978,7 +1978,7 @@ __metadata:
   dependencies:
     "@preact/preset-vite": "npm:^2.10.2"
     "@tailwindcss/vite": "npm:^4.1.17"
-    oneui-icons-react: "npm:^0.0.8"
+    oneui-icons-react: "npm:latest"
     preact: "npm:^10.27.2"
     preact-iso: "npm:^2.11.0"
     preact-render-to-string: "npm:^6.6.3"
