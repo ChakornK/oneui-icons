@@ -1776,10 +1776,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"oneui-icons-react@npm:^0.0.6":
-  version: 0.0.6
-  resolution: "oneui-icons-react@npm:0.0.6"
-  checksum: 10c0/191126ea58d95650b89e0381382ae76e1d7638d6e798dddc8a4363391f2bf51c370160e5fce9e31ade4ea6f4b4892a0e710f25d62b9bb84457128995f7a91c03
+"oneui-icons-react@npm:^0.0.8":
+  version: 0.0.8
+  resolution: "oneui-icons-react@npm:0.0.8"
+  checksum: 10c0/b770e6ab0a6f278f36893f5289ca78709864a7b2e044309f9bb287e34712de26fbe429da34f74a8d3b4bc66eb77be40bde602a24735833d4147fff8d335cb961
   languageName: node
   linkType: hard
 
@@ -1978,7 +1978,7 @@ __metadata:
   dependencies:
     "@preact/preset-vite": "npm:^2.10.2"
     "@tailwindcss/vite": "npm:^4.1.17"
-    oneui-icons-react: "npm:^0.0.6"
+    oneui-icons-react: "npm:^0.0.8"
     preact: "npm:^10.27.2"
     preact-iso: "npm:^2.11.0"
     preact-render-to-string: "npm:^6.6.3"
