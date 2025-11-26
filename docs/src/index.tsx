@@ -11,13 +11,15 @@ import { Home } from "./pages/Home/index.js";
 import { NotFound } from "./pages/_404.js";
 import "./style.css";
 
+const BASE = "/oneui-icons/";
+
 export function App() {
   return (
     <LocationProvider>
       <div class="h-screen w-screen overflow-hidden">
         <Header />
         <Router>
-          <Route path="/" component={Home} />
+          <Route path={`${BASE}`} component={Home} />
           <Route default component={NotFound} />
         </Router>
       </div>
